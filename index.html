@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aiden Chan</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/matrix.css">
+</head>
+<body>
+    <canvas id='matrix'></canvas>
+
+    <svg class='hide' xmlns="http://www.w3.org/2000/svg">
+    	  <defs>
+    		    <filter id='blur-horizontal'>
+    			      <feGaussianBlur stdDeviation='3,0' />
+        		</filter>
+        		<filter id='blur-vertical'>
+    			      <feGaussianBlur stdDeviation='0,6' />
+    		    </filter>
+    	  </defs>
+    </svg>
+
+    <div class="navbar">
+            <a class="name" href="#home">Aiden Chan</a>
+        <ul>
+            <li><a class="rightSide" href="#contact">Contact</a></li>
+            <li><a class="rightSide" href="#aboutMe">About Me</a></li>
+        </ul>
+    </div>
+
+    <div class="intro-body">
+        <div class="intro">
+            <img src="images/kuroko.jpg" class="profile">
+            <div class="content">
+                <h1>Hello World.</h1>
+                <h2>Meet Aiden Chan - <em>Cybersecurity Student</em></h2>
+                <h3>I am a generalist who works on anything</h3>
+            </div>
+        </div>
+        <div class="bottom-intro">
+            <button type="button"></button>
+        </div>
+    </div>
+
+    <script src="scripts/matrix.js"></script>
+</body>
+</html> 
