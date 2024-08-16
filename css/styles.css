@@ -19,9 +19,27 @@ body {
     justify-content: space-between;
 }
 
-.navbar name {
-    width: 120px;
-    cursor: pointer;
+.navbar .name {
+    font-size: 23px; /* Adjust as needed */
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+}
+
+.navbar .name::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #89b4fa;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.navbar .name:hover::after {
+    width: 100%;
 }
 
 .navbar ul li {
@@ -55,13 +73,25 @@ body {
 }
 
 /* Content styling */
-.intro {
+.intro-body {
     width: 85%;
     margin: auto;
     padding-top: 150px;
-    display: flex;
+}
+
+.intro {
+    display: grid;
+    grid-template-columns: 2fr 4fr;
+    grid-template-rows: auto auto;
+    gap: 20px;
     align-items: center;
-    box-sizing: border-box;
+}
+
+.top-left {
+    grid-column: 1;
+    grid-row: 1;
+    display: flex;
+    justify-content: center;
 }
 
 .profile {
@@ -72,10 +102,17 @@ body {
     border: 5px solid #89b4fa;
 }
 
+.top-right {
+    grid-column: 2;
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .content {
     text-align: left;
     color: #fff;
-    margin-left: 100px;
 }
 
 .content em {
@@ -94,4 +131,78 @@ body {
 
 .content h3 {
     font-size: 25px;
+}
+
+.bottom {
+    display: grid;
+    grid-template-columns: 2fr 4fr;
+    grid-template-rows: auto auto;
+    gap: 20px;
+    align-items: center;
+}
+
+.bottom-left {
+    grid-column: 1;
+    grid-row: 2;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.bottom-left a {
+    text-decoration: none;
+}
+
+.social-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 30px;
+    margin: 4px 2px;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+}
+
+.bottom-right {
+    grid-column: 2;
+    grid-row: 2;
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    width: 200px;
+    font-size: 20px;
+    padding: 15px 0;
+    text-align: center;
+    border-radius: 50px;
+    font-weight: bold;
+    border: 3px solid #89b4fa;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+button span {
+    background: #89b4fa;
+    height: 100%;
+    width: 0%;
+    border-radius: 50px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+button:hover span{
+    width: 100%;
+}
+
+button:hover{
+    border: none;
 }
