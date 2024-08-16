@@ -34,7 +34,18 @@
     <div class="intro-body">
         <div class="intro">
             <div class="top-left">
-                <img src="images/selfie.jpg" class="profile">
+                <picture>
+                    <source
+                        srcsec="
+                        images/selfie.jpg?width=100 100w,
+                        images/selfie.jpg?width=200 200w,
+                        images/selfie.jpg?width=400 400w,
+                        images/selfie.jpg?width=800 800w,
+                        "
+                        sizes="(max-width: 800px) 100vw, 50vw">
+                    <img loading="lazy" alt="profile-image"
+                        src="images/selfie.jpg" class="profile">
+                </picture>
             </div>
             <div class="top-right">
                 <div class="content">
